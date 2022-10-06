@@ -7,4 +7,17 @@
 body{
     background-color: #181a1b;
     color: white;
+    font-family: sans-serif;
+    font-size: 24px;
 }
+
+.container{
+    padding: 12px;
+    background-color: blue;
+}
+
+
+
+
+
+
