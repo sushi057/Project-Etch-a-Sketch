@@ -7,7 +7,7 @@ function createGrid(size){
             gridDiv.classList.add('box');
             gridDiv.style.height = "$(size)px";
             gridDiv.style.width = "$(size)px";
-
+            gridDiv.textContent = "#";
             sketchArea.appendChild(gridDiv);
         }
     }
