@@ -1,4 +1,5 @@
 const sketchArea = document.querySelector('.sketch');
+const inputSize = document.querySelector('input');
 
 function createGrid(size){
     for(let i=0; i<size; i++){
@@ -7,10 +8,22 @@ function createGrid(size){
             gridDiv.classList.add('box');
             gridDiv.style.height = "$(size)px";
             gridDiv.style.width = "$(size)px";
-            gridDiv.textContent = "#";
+            gridDiv.style.border = "2px solid black";
             sketchArea.appendChild(gridDiv);
         }
     }
 }
 
 createGrid(16);
+
+function resetGrid(){
+
+}
+
+function newGrid(gridSize){
+
+}
+
+function drawGrid(){
+
+}
