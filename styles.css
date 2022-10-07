@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Open+Sans:wght@500;700&family=Overpass:wght@400;700&display=swap');
 
-:root{
-    --defaultSize: 16;
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -75,11 +71,10 @@ button:hover{
 
 .sketch{
     display: grid;
-    grid-template-columns: repeat(var(--defaultSize), 32px);
+    grid-template-columns: repeat(16, 32px);
     grid-auto-columns: 32px;
     grid-auto-rows: 32px;
     border: 2mm ridge rgba(50, 220, 212, 0.6);
-    /* overflow:hidden; */
 }
 
 a{

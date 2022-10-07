@@ -1,12 +1,12 @@
 const sketchArea = document.querySelector('.sketch');
+let sketchAreaStyles = window.getComputedStyle(sketchArea);
 const inputBox = document.querySelector('input');
 const applyButton = document.querySelector('#apply');
 const resetButton = document.querySelector('#reset');
 
-//The default size of grid
-let root = document.querySelector(':root');
-
 function createGrid(size){
+    sketchArea.style.gridTemplateColumns = `repeat(${size}, 32px)`;
+    console.log(sketchArea.style.gridTemplateColumns);
     for(let i=0; i<size; i++){
         for(let j=0; j<size; j++){
             const gridDiv = document.createElement('div');
