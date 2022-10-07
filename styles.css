@@ -44,6 +44,13 @@ h1{
     align-items: center;
 }
 
+input[type='text']{
+    border-radius: 8px;
+    font-size: 18px;
+    margin-left: 8px;
+    padding: 4px;
+}
+
 .buttons{
     display: flex;
     justify-content: end;
@@ -53,15 +60,13 @@ button{
     font-size: 16px;
     padding: 3px;
     border-radius: 5px;
-    margin: 8px 4px 0;
+    margin: 8px 4px 6px;
     font-weight: 600;
 }
 
-input[type='text']{
-    border-radius: 8px;
-    font-size: 18px;
-    margin-left: 8px;
+button:hover{
     padding: 4px;
+    background-color: rgb(196, 189, 189);
 }
 
 .sketch{
@@ -72,16 +77,12 @@ input[type='text']{
     overflow:hidden;
 }
 
-.box-draw{
+/* .box-draw{
     background-color: black;
-}
+} */
 
 a{
     text-decoration: none;
-}
-
-.footer{
-
 }
 
 

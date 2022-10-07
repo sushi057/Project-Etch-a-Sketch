@@ -2,9 +2,7 @@ const sketchArea = document.querySelector('.sketch');
 const inputBox = document.querySelector('input');
 const applyButton = document.querySelector('#apply');
 const resetButton = document.querySelector('#reset');
-const gridBoxColor = document.body.backgroundColor;
 
-newGridSize = inputBox.value;
 
 function createGrid(size){
     for(let i=0; i<size; i++){
@@ -17,9 +15,8 @@ function createGrid(size){
             sketchArea.appendChild(gridDiv);
         }
     }
+    console.log('hmm');
 }
-
-createGrid(16);
 
 function drawGrid(){
     const gridBox = document.querySelectorAll('.box');
@@ -30,19 +27,26 @@ function drawGrid(){
     });
 }
 
-drawGrid();
-
-function resetGrid(){
+function eraseGrid(){
     const gridBox = document.querySelectorAll('.box');
     gridBox.forEach((box) => {
-        box.style.backgroundColor = gridBoxColor;
+        box.style.backgroundColor = "#355d8a";
     })
 }
 
-resetButton.addEventListener('click', resetGrid());
 
-applyButton.addEventListener('click', () => {
-    resetGrid();
-    createGrid()
+
+resetButton.addEventListener('click', () => {
+    eraseGrid();
 });
 
+applyButton.addEventListener('click', () => {
+    newGridSize = parseInt(inputBox.value);
+    eraseGrid();
+    createGrid(newGridSize);
+});
+
+
+
+createGrid(16);
+drawGrid()
