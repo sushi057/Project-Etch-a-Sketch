@@ -16,14 +16,20 @@ function createGrid(size){
 
 createGrid(16);
 
+
+function drawGrid(){
+    const gridBox = document.querySelector('.box');
+    gridBox.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = "white";
+    })
+}
+
+drawGrid();
+
 function resetGrid(){
 
 }
 
 function newGrid(gridSize){
-
-}
-
-function drawGrid(){
 
 }
