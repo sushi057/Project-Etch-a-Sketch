@@ -74,12 +74,8 @@ button:hover{
     grid-template-columns: repeat(16, 32px);
     grid-auto-rows: 32px;
     border: 2mm ridge rgba(50, 220, 212, 0.6);
-    overflow:hidden;
+    /* overflow:hidden; */
 }
-
-/* .box-draw{
-    background-color: black;
-} */
 
 a{
     text-decoration: none;

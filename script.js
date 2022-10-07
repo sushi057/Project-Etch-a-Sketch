@@ -34,7 +34,13 @@ function eraseGrid(){
     })
 }
 
-
+function removeGrid(){
+    let box = sketchArea.firstElementChild;
+    while(box){
+        box.remove();
+        box = sketchArea.firstElementChild;
+    }
+}
 
 resetButton.addEventListener('click', () => {
     eraseGrid();
@@ -42,8 +48,13 @@ resetButton.addEventListener('click', () => {
 
 applyButton.addEventListener('click', () => {
     newGridSize = parseInt(inputBox.value);
-    eraseGrid();
-    createGrid(newGridSize);
+    removeGrid();
+    if(newGridSize){
+        createGrid(newGridSize);
+    }
+    else{
+        createGrid(16);
+    }
 });
 
 
