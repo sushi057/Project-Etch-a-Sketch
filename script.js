@@ -1,5 +1,10 @@
 const sketchArea = document.querySelector('.sketch');
-const inputSize = document.querySelector('input');
+const inputBox = document.querySelector('input');
+const applyButton = document.querySelector('#apply');
+const resetButton = document.querySelector('#reset');
+const gridBoxColor = document.body.backgroundColor;
+
+newGridSize = inputBox.value;
 
 function createGrid(size){
     for(let i=0; i<size; i++){
@@ -16,20 +21,28 @@ function createGrid(size){
 
 createGrid(16);
 
-
 function drawGrid(){
-    const gridBox = document.querySelector('.box');
-    gridBox.addEventListener("mouseover", (event) => {
-        event.target.style.backgroundColor = "white";
-    })
+    const gridBox = document.querySelectorAll('.box');
+    gridBox.forEach((gridDiv) => {
+        gridDiv.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = "black";
+        });
+    });
 }
 
 drawGrid();
 
 function resetGrid(){
-
+    const gridBox = document.querySelectorAll('.box');
+    gridBox.forEach((box) => {
+        box.style.backgroundColor = gridBoxColor;
+    })
 }
 
-function newGrid(gridSize){
+resetButton.addEventListener('click', resetGrid());
 
-}
+applyButton.addEventListener('click', () => {
+    resetGrid();
+    createGrid()
+});
+

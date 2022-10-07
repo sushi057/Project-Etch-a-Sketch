@@ -72,6 +72,10 @@ input[type='text']{
     overflow:hidden;
 }
 
+.box-draw{
+    background-color: black;
+}
+
 a{
     text-decoration: none;
 }
