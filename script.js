@@ -3,8 +3,11 @@ const inputBox = document.querySelector('input');
 const applyButton = document.querySelector('#apply');
 const resetButton = document.querySelector('#reset');
 
+//The default size of grid
+let root =document.querySelector(':root');
 
 function createGrid(size){
+    root.style.setProperty('--defaultSize', 'size');
     for(let i=0; i<size; i++){
         for(let j=0; j<size; j++){
             const gridDiv = document.createElement('div');
@@ -55,9 +58,8 @@ applyButton.addEventListener('click', () => {
     else{
         createGrid(16);
     }
+    drawGrid();
 });
-
-
 
 createGrid(16);
 drawGrid()
